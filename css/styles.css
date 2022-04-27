@@ -4,7 +4,6 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-color: #222;
-	text-shadow: 1px -1px 0px rgba(170,170,170,0.3);
 	color: #777;
 	font-variant: small-caps;
 	font-family: 'Roboto Condensed', Tahoma, sans-serif;
@@ -16,10 +15,6 @@ a {
 	color: #777;
 	font-size: 0.8em;
 	text-decoration: none;
-}
-
-a:hover {
-	color: #c4c4c4;
 }
 
 p {
@@ -90,13 +85,6 @@ p {
 	transition: background-color 350ms linear;
 }
 
-.cell:hover {
-	background-color: #111 !important;
-	-webkit-transition: background-color 0ms linear;
-	-ms-transition: background-color 0ms linear;
-	transition: background-color 0ms linear;
-}
-
 .logo {
 	background: url(../images/whitechin.png) no-repeat;
 	background-size: contain;
@@ -108,19 +96,10 @@ p {
 	font-size: 10em;
 }
 
-.menu-button:hover, .menu-cell:hover {
-	text-shadow: 1px -1px 0px rgba(183, 183, 183, 0.3);
-	color: #c4c4c4;
-}
-
 .long_item {
 	display: flex;
 	width: 50%;
 	position: relative;
-}
-
-.long_item:hover {
-	color: #c4c4c4;
 }
 
 .pointer-cell {
@@ -213,8 +192,18 @@ p {
 
 .selectedcell {
 	background-color: #333 !important;
-	text-shadow: 1px -1px 0px rgba(183, 183, 183, 0.3);
 	color: #c4c4c4;
+}
+
+.dnlCv {
+        font-size: calc(0.4vw + 0.4vh + 1.2vmax);
+}
+
+.this_code_link {
+        position: absolute;
+        bottom: 0.5em;
+        right: 1em;
+        z-index: 15;
 }
 
 /* Portfolio css */
@@ -233,13 +222,13 @@ p {
 	.portfolio_title {
 		width: 100%;
 		text-align: left;
-		font-size: 1.3em;
+		font-size: calc(0.8vw + 0.8vh + 1.5vmax);
 	}
 
 	.portfolio_list {
 		width: 45%;
-		font-size: 0.8em;
-		line-height: 1.1em;
+		font-size: calc(0.3vw + 0.3vh + 0.8vmax);
+		line-height: 1em;
 		text-align: left;
 		padding-left: 1.5em;
 	}
@@ -249,17 +238,29 @@ p {
 		text-align: justify;
 		line-height: 1em;
 		padding-block-start: 2em;
-		font-size: 1em;
+		font-size: calc(0.5vw + 0.5vh + 0.7vmax);
 	}
 
+        .port_sum {
+                padding-block-end: 2em;
+		font-size: calc(0.5vw + 0.5vh + 0.7vmax);
+        }
+        
+        .port_links {
+                display: flex;
+                align-self: center;
+                font-size: calc(0.5vw + 0.5vh + 0.7vmax);
+                line-height: 1em;
+        }
+        
 	.long_span_txt {
 		width: 80%;
-		font-size: 1em;
+		font-size: calc(0.3vw + 0.3vh + 1vmax);
 		align-self: center;
 		display: flex;
 	}
 
-/* Work css */
+/* Education css */
 	#activeleft2, #activeright2 {
 		width: 100%;
 		height: 100%;
@@ -274,7 +275,7 @@ p {
 	.edTitle {
 		color: darkgray;
 		font-weight: bold;
-		font-size: 1.2em;
+		font-size: calc(0.5vw + 0.5vh + 0.7vmax);
 		display: inline-block;
 		text-align: start;
 	}
@@ -282,11 +283,12 @@ p {
 	.edPlace {
 		display: inline-block;
 		text-align: start;
+                calc(0.5vw + 0.5vh + 0.7vmax);
 	}
 
 	.edDate {
 		font-style: italic;
-		font-size: 0.7em;
+		font-size: calc(0.4vw + 0.4vh + 0.5vmax);
 		color: lightslategrey;
 		text-indent: 1em;
 		display: inline-block;
@@ -296,15 +298,19 @@ p {
 		text-indent: 1em;
 		display: inline-block;
 		text-align: start;
-		font-size: 0.9em;
+		font-size: calc(0.5vw + 0.5vh + 0.7vmax);
 	}
 
 	#ed {
-		font-size: 2em;
-		line-height: 0.8em;
+		font-size: calc(0.8vw + 0.8vh + 1.5vmax);
+		line-height: 1em;
 		margin: 0;
 		padding: 0.5em;
 	}
+        
+        #activeleft2 p, #activeright2 p {
+                padding-block-end: 1em;
+        }
 
 /* Work css */
 	#activeleft3, #activeright3 {
@@ -321,7 +327,7 @@ p {
 	.workTitle {
 		color: darkgray;
 		font-weight: bold;
-		font-size: 1.2em;
+		font-size: calc(0.5vw + 0.5vh + 0.7vmax);
 		display: inline-block;
 		text-align: start;
 	}
@@ -329,11 +335,12 @@ p {
 	.workPlace {
 		display: inline-block;
 		text-align: start;
+                calc(0.5vw + 0.5vh + 0.7vmax);
 	}
 
 	.workDate {
 		font-style: italic;
-		font-size: 0.7em;
+		font-size: calc(0.4vw + 0.4vh + 0.5vmax);
 		color: lightslategrey;
 		text-indent: 1em;
 		display: inline-block;
@@ -343,15 +350,19 @@ p {
 		text-indent: 1em;
 		display: inline-block;
 		text-align: start;
-		font-size: 0.9em;
+		font-size: calc(0.5vw + 0.5vh + 0.7vmax);
 	}
 
 	#workexp {
-		font-size: 2em;
-		line-height: 0.8em;
+		font-size: calc(0.8vw + 0.8vh + 1.5vmax);
+		line-height: 1em;
 		margin: 0;
 		padding: 0.5em;
 	}
+        
+        #activeleft3 p, #activeright3 p {
+                padding-block-end: 1em;
+        }
 
 /* About css */
 	#activeleft4, #activeright4 {
@@ -365,14 +376,14 @@ p {
 	}
 
 	.abList {
-		font-size: 1em;
-		line-height: 1.35em;
-		padding: 1.25em 0.5em;
+font-size: calc(0.4vw + 0.4vh + 0.75vmax);
+line-height: 1.15em;
+padding: 0.5em;
 	}
 
 	#ab {
-		font-size: 2em;
-		line-height: 0.8em;
+		font-size: calc(0.8vw + 0.8vh + 1.5vmax);
+		line-height: 1em;
 		margin: 0;
 		padding: 0.5em;
 	}
@@ -401,32 +412,19 @@ p {
 		border-radius: 5px;
 	}
 
-	#send:hover {
-		background-color: #414244;
-		color: slategray;
-	}
 	.formfield:active:focus, .formfield:active, .formfield:focus, .formfield:focus-visible {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(255, 255, 255, 0.6);
 		outline: 0 none;
 		background-color: #484848;
-    }
+        }
 
 /* Light css */
-	.menu-cell .lightcell:hover {
-		background-color: #e1e1e1 !important;
-		color: #c4c4c4 !important;
-		-webkit-transition: background-color 0ms linear;
-		-ms-transition: background-color 0ms linear;
-		transition: background-color 0ms linear;
-	}
-
 	.lightbody {
 		background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(231, 239, 242) 38%, rgb(206, 206, 206) 100%);
 	}
 
 	.lightcell {
 		background-color: #ccc !important;
-		text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.3) !important;
 		color: #444 !important;
 		-webkit-transition: background-color 350ms linear;
 		-ms-transition: background-color 350ms linear;
@@ -441,15 +439,7 @@ p {
 
 	.lightselectedcell {
 		background-color: #9d9d9d !important;
-		text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.3) !important;
 		color: #fff !important;
-	}
-
-	.lightcell:hover {
-		background-color: #e1e1e1 !important;
-		-webkit-transition: background-color 0ms linear;
-		-ms-transition: background-color 0ms linear;
-		transition: background-color 0ms linear;
 	}
 
 	.lightformfield {
@@ -459,11 +449,6 @@ p {
 
 	.lightformbutton {
 		background-color: #8b9095 !important;
-	}
-
-	.lightformbutton:hover {
-		background-color: #414244 !important;
-		color: #f7f7f7 !important;
 	}
 
 	.lightformfield:active:focus, .lightformfield:active, .lightformfield:focus, .lightformfield:focus-visible {
@@ -653,7 +638,11 @@ p {
 		  }
 		}
 
-@media (orientation: portrait) {
+@media (orientation: portrait), (max-width: 400px) {
+        label {
+                font-size: 0.9em;
+        }
+        
 	.container {
 		max-width: 100vw;
   		width: 100vw;
@@ -683,6 +672,7 @@ p {
 		width: calc(1000vw/12);
 		align-self: end;
 		top: 0;
+                right: 0;
   	}
 
   	.upper-top-row {
@@ -747,75 +737,98 @@ p {
 		height: 100%;
 	}
 
+        .dnlCv {
+                font-size: calc(1.3vw + 1.3vh + 1.2vmax);
+        }
+        
 	/* Portfolio css */
+		#activeleft, #activeright {
+			padding-block-start: 1em;
+		}
+                
 		.portfolio_title {
-			font-size: 4vw;
+			font-size: calc(1.6vw + 1.6vh + 1.5vmax);
 		}
 
 		.portfolio_list {
-			font-size: 0.5em;
+			font-size: calc(0.8vw + 0.8vh + 1vmax);
 		}
 
 		.portfolio_desc {
-			padding-block-start: 7vw;
-			font-size: 4vw;
+			padding-block-start: 8vh;
+			font-size: calc(0.8vw + 0.8vh + 1vmax);
 		}
+
+                .port_sum {
+			padding-block-end: 2em;
+			font-size: calc(0.8vw + 0.8vh + 1vmax);
+                }
+                
+                .port_links {
+                        display: flex;
+                        align-self: center;
+                        font-size: calc(1.6vw + 1.6vh + 1.2vmax);
+                }
 
 		.long_span_txt {
 			width: 80%;
-			font-size: 3.5vw;
+			font-size: calc(0.7vw + 0.7vh + 1vmax);
 			align-self: center;
 			display: flex;
 		}
 
 	/* Education css */
 		#activeleft2, #activeright2 {
-			line-height: 2.8vmin;
+			line-height: 3.8vmin;
 		}
 
 		.edTitle {
-			font-size: 3.24vw;
+			font-size: calc(0.9vw + 0.9vh + 0.7vmax);
 		}
 
 		.edPlace {
-			font-size: 3vw;
+			font-size: calc(0.9vw + 0.9vh + 0.7vmax);
 		}
 
 		.edDate {
-			font-size: 2vw;
+			font-size: calc(0.75vw + 0.75vh + 0.5vmax);
 		}
 
 		.edList {
-			font-size: 2.5vw;
+			font-size:  calc(0.9vw + 0.9vh + 0.7vmax);
 		}
 
 		#ed {
-			font-size: 4vw;
+			font-size: calc(1.6vw + 1.6vh + 1.5vmax);
 		}
+
+                #activeleft2 p, #activeright2 p {
+                        padding-block-end: 0.7em;
+                }
 
 	/* Work css */
 		#activeleft3, #activeright3 {
-			line-height: 2vh;
+			line-height: 3.8vmin;
 		}
 
 		.workTitle {
-			font-size: 3.25vw;
+			font-size: calc(0.9vw + 0.9vh + 0.7vmax);
 		}
 
 		.workPlace {
-			font-size: 3vw;
+			font-size: calc(0.9vw + 0.9vh + 0.7vmax);
 		}
 
 		.workDate {
-			font-size: 2vw;
+			font-size: calc(0.75vw + 0.75vh + 0.5vmax);
 		}
 
 		.workList {
-			font-size: 2.5vw;
+			font-size: calc(0.9vw + 0.9vh + 0.7vmax);
 		}
 
 		#workexp {
-			font-size: 4vw;
+			font-size: calc(1.6vw + 1.6vh + 1.5vmax);
 		}
 
 	/* About css */
@@ -824,12 +837,13 @@ p {
 		}
 
 		.abList {
-			font-size: 2.9vw;
-			line-height: 3.5vw;
+font-size: calc(0.37vw + 0.37vh + 1.35vmax);
+line-height: 1.15em;
+padding: 0.5em;
 		}
 
 		#ab {
-			font-size: 4vw;
+			font-size: calc(1.6vw + 1.6vh + 1.5vmax);
 		}
 
 	/* Light css */
@@ -841,17 +855,50 @@ p {
 		}
 }
 
- /* Hide scrollbar
-. main_content {
-	overflow-y: scroll;
-	float: left;
-}
+@media (hover: hover) and (pointer: fine) {
+        a:hover {
+                color: #9d9d9d;
+        }
 
-#splashleft::-webkit-scrollbar {
-  display: none;
-}
+        .cell:hover {
+                background-color: #111 !important;
+                -webkit-transition: background-color 0ms linear;
+                -ms-transition: background-color 0ms linear;
+                transition: background-color 0ms linear;
+        }
 
-#splashleft {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
-}*/
+        .menu-button:hover, .menu-cell:hover {
+                color: #c4c4c4;
+        }
+
+        .long_item:hover {
+                color: #c4c4c4;
+        }
+
+        /* Contact css */
+                #send:hover {
+                        background-color: #414244;
+                        color: slategray;
+                }
+                
+        /* Light css */    
+                .menu-cell .lightcell:hover {
+                        background-color: #e1e1e1 !important;
+                        color: #c4c4c4 !important;
+                        -webkit-transition: background-color 0ms linear;
+                        -ms-transition: background-color 0ms linear;
+                        transition: background-color 0ms linear;
+                }
+
+                .lightcell:hover {
+                        background-color: #e1e1e1 !important;
+                        -webkit-transition: background-color 0ms linear;
+                        -ms-transition: background-color 0ms linear;
+                        transition: background-color 0ms linear;
+                }
+
+                .lightformbutton:hover {
+                        background-color: #414244 !important;
+                        color: #f7f7f7 !important;
+                }
+}
