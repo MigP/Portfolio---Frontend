@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link id="logoicon" rel="shortcut icon" href="images/logo.png">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Bangers');
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+  </style>
+  <meta charset="utf-8">
+  <meta name="description" content="Miguel Pinto - Frontend developer portfolio">
+  <meta name="author" content="Miguel Pinto">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miguel Pinto</title>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/knockout-3.5.1.js"></script> 
+  <script src="js/app.js"></script> 
+ </head>
+<body data-bind="css: { lightbody: light() }">
+  <div class= "container">
+    <div class="row upper-top-row">
+      <div class="col-1 cell logo pointer-cell" data-bind="css: { lightcell: light(), lightlogo: light() }, click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('home')"></div>
+
+      <div class="flip-card col-1">
+        <div class="flip-card-inner blank" id="flip1">
+          <div class="flip-card-front-hor cell menu-button" data-bind="css: { lightcell: light() }, text: orientation() == 'portrait' ? menuSymbol() : '', click:  orientation() == 'portrait' ? toggleHiddenMenu : ''">
+          </div>
+          <div class="flip-card-back-hor cell menu-button" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip2">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.portfolioEN() : text.portfolioFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('portfolio')">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip3">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.educationEN() : text.educationFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('education')">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip4">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.workEN() : text.workFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('work')">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip5">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.aboutEN() : text.aboutFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('about')">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip6">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.contactEN() : text.contactFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('contact')">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }, click:  hiddenMenu() == true ? closeHiddenMenu : ''">
+        <div class="flip-card-inner" id="flip7">
+          <div class="flip-card-front-hor cell" data-bind="css: { lightcell: light() }">
+          </div>
+          <div class="flip-card-back-hor cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip8">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightselectedcell: light(), lightcell: light() }, text: english() ? text.lightEN() : text.lightFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.lightStyle();">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip9">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: dark(), lightcell: light() }, text: english() ? text.darkEN() : text.darkFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.darkStyle();">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip10">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: english() && dark(), lightselectedcell: english() && light(), lightcell: light() }, text: english() ? text.englishEN() : text.englishFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.englishLanguage();">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip11">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: french() && dark(), lightselectedcell: french() && light(), lightcell: light() }, text: english() ? text.frenchEN() : text.frenchFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.frenchLanguage();">
+          </div>
+          <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="row lower-top-row" data-bind="click:  hiddenMenu() == true ? closeHiddenMenu : ''">
+      <div class="col-1 cell landscape-cell" data-bind="css: { lightcell: light() }"></div>
+      <div class="col-1 cell landscape-cell" data-bind="css: { lightcell: light() }"></div>
+
+      <div class="flip-card col-5 long-header-cell">
+        <div class="flip-card-inner dlong-header-cell" id="flip12">
+          <div id="long_left_front" class="flip-card-front-ver cell" data-bind="css: { lightcell: light() }">
+          </div>
+          <div id="long_left_back" class="flip-card-back-ver cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+      <div class="flip-card col-5 long-header-cell">
+        <div class="flip-card-inner dlong-header-cell" id="flip13">
+          <div id="long_right_front" class="flip-card-front-ver cell" data-bind="css: { lightcell: light() }">
+          </div>
+          <div id="long_right_back" class="flip-card-back-ver cell" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row bottom-row" data-bind="click:  hiddenMenu() == true ? closeHiddenMenu : ''">
+      <div class="col-1 cell landscape-cell" data-bind="css: { lightcell: light() }"></div>
+      <div class="col-1 cell landscape-cell" data-bind="css: { lightcell: light() }"></div>
+
+      <div class="flip-card col-5 big-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip14">
+          <div id="main_left_front" class="flip-card-front-hor cell main_content" data-bind="css: { lightcell: light() }">
+            <div id="splashleft"></div>
+          </div>
+          <div id="main_left_back" class="flip-card-back-hor cell main_content" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card col-5 big-cell" data-bind="css: { lightmenucell: light() }">
+        <div class="flip-card-inner" id="flip15">
+          <div id="main_right_front" class="flip-card-front-hor cell main_content" data-bind="css: { lightcell: light() }">
+            <div id="splashright"></div>
+          </div>
+          <div id="main_right_back" class="flip-card-back-hor cell main_content" data-bind="css: { lightcell: light() }">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
