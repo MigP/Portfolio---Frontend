@@ -697,7 +697,7 @@ padding: 0.5em;
   		width: 75vw;
   		z-index: 10;
   		font-size: 5em;
-  		height: calc(99.7vh/12);
+  		height: calc(99.7vh/13);
   		background-color: #222;
 
 		-webkit-transition: left 0.5s;
