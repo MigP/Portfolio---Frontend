@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <link id="logoicon" rel="shortcut icon" href="images/logo.png">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
   <style type="text/css">
     @import url('https://fonts.googleapis.com/css?family=Bangers');
     @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
@@ -14,13 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miguel Pinto</title>
   <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/knockout-3.5.1.js"></script> 
-  <script src="js/app.js"></script> 
+  <script src="js/knockout-3.5.1.js"></script>
+  <script src="js/app.js"></script>
  </head>
 <body data-bind="css: { lightbody: light() }">
   <div class= "container">
     <div class="row upper-top-row">
-      <div class="col-1 cell logo pointer-cell" data-bind="css: { lightcell: light(), lightlogo: light() }, click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('home')"></div>
+      <div class="col-1 cell logo pointer-cell" data-bind="css: { lightcell: light(), lightlogo: light() }, click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('home')"></div>
 
       <div class="flip-card col-1">
         <div class="flip-card-inner blank" id="flip1">
@@ -33,7 +31,7 @@
 
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip2">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.portfolioEN() : text.portfolioFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('portfolio')">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.portfolioEN() : text.portfolioFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('portfolio')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -42,7 +40,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip3">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.educationEN() : text.educationFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('education')">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.educationEN() : text.educationFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('education')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -51,7 +49,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip4">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.workEN() : text.workFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('work')">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.workEN() : text.workFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('work')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -60,7 +58,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip5">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.aboutEN() : text.aboutFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('about')">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.aboutEN() : text.aboutFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('about')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -69,14 +67,14 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip6">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.contactEN() : text.contactFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="changeFlipDiv('contact')">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.contactEN() : text.contactFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('contact')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
         </div>
       </div>
 
-      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }, click:  hiddenMenu() == true ? closeHiddenMenu : ''">
+      <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }, click:  orientation() == 'portrait' ? closeHiddenMenu : ''">
         <div class="flip-card-inner" id="flip7">
           <div class="flip-card-front-hor cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -87,7 +85,7 @@
 
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip8">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightselectedcell: light(), lightcell: light() }, text: english() ? text.lightEN() : text.lightFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.lightStyle();">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightselectedcell: light(), lightcell: light() }, text: english() ? text.lightEN() : text.lightFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="viewModel.lightStyle();">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -96,7 +94,7 @@
 
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip9">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: dark(), lightcell: light() }, text: english() ? text.darkEN() : text.darkFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.darkStyle();">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: dark(), lightcell: light() }, text: english() ? text.darkEN() : text.darkFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="viewModel.darkStyle();">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -105,7 +103,7 @@
 
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip10">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: english() && dark(), lightselectedcell: english() && light(), lightcell: light() }, text: english() ? text.englishEN() : text.englishFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.englishLanguage();">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: english() && dark(), lightselectedcell: english() && light(), lightcell: light() }, text: english() ? text.englishEN() : text.englishFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="viewModel.englishLanguage();">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -114,7 +112,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip11">
-          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: french() && dark(), lightselectedcell: french() && light(), lightcell: light() }, text: english() ? text.frenchEN() : text.frenchFR(), click:  hiddenMenu() == true ? closeHiddenMenu : ''" onclick="viewModel.frenchLanguage();">
+          <div class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: french() && dark(), lightselectedcell: french() && light(), lightcell: light() }, text: english() ? text.frenchEN() : text.frenchFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="viewModel.frenchLanguage();">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -145,7 +143,7 @@
       </div>
 
     </div>
-    <div class="row bottom-row" data-bind="click:  hiddenMenu() == true ? closeHiddenMenu : ''">
+    <div class="row bottom-row" data-bind="click: orientation() == 'portrait' ? closeHiddenMenu : ''">
       <div class="col-1 cell landscape-cell" data-bind="css: { lightcell: light() }"></div>
       <div class="col-1 cell landscape-cell" data-bind="css: { lightcell: light() }"></div>
 
@@ -162,6 +160,7 @@
       <div class="flip-card col-5 big-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip15">
           <div id="main_right_front" class="flip-card-front-hor cell main_content" data-bind="css: { lightcell: light() }">
+                  <a id='mainCode' class='this_code_link' data-bind='text: english() ? text.mainCodeEN() : text.mainCodeFR()' target='_blank' href='https://github.com/MigP/Portfolio'></a>
             <div id="splashright"></div>
           </div>
           <div id="main_right_back" class="flip-card-back-hor cell main_content" data-bind="css: { lightcell: light() }">
@@ -171,5 +170,64 @@
 
     </div>
   </div>
+  
+  <div class="hidden">
+    <script type="text/javascript">
+      if (document.images) {
+          img1 = new Image();
+          img2 = new Image();
+          img3 = new Image();
+          img4 = new Image();
+          img5 = new Image();
+          img6 = new Image();
+          img7 = new Image();
+          img8 = new Image();
+          img9 = new Image();
+          img10 = new Image();
+          img11 = new Image();
+          img12 = new Image();
+          
+          img1.src = "images/blackchin.png";
+          img2.src = "images/left.png";
+          img3.src = "images/left_hover.png";
+          img4.src = "images/logo.png";
+          img5.src = "images/right.png";
+          img6.src = "images/right_hover.png";
+          img7.src = "images/splash-left-large.jpg";
+          img8.src = "images/splash-left-small.jpg";
+          img9.src = "images/splash-right-large.jpg";
+          img10.src = "images/splash-right-small.jpg";
+          img11.src = "images/whitechin.png";
+          img12.src = "images/whitelogo.png";
+        if (isMobile) {
+          img13 = new Image();
+          img14 = new Image();
+          img15 = new Image();
+          img16 = new Image();
+          img17 = new Image();
+          
+          img13.src = "images/Bug_attack_small.png";
+          img14.src = "images/Neighbourhood_map_small.png";
+          img15.src = "images/pic_small.jpg";
+          img16.src = "images/PortFollow_small.png";
+          img17.src = "images/PPUE21_small.png";
+        } else {
+          img18 = new Image();
+          img19 = new Image();
+          img20 = new Image();
+          img21 = new Image();
+          img22 = new Image();
+
+          img18.src = "images/Bug_attack_large.png";
+          img19.src = "images/Neighbourhood_map_large.png";
+          img20.src = "images/pic_large.jpg";
+          img21.src = "images/PortFollow_large.png";
+          img22.src = "images/PPUE21_large.png";
+        }
+      }
+    </script>
+  </div>
+  <link async href="css/bootstrap.min.css" rel="stylesheet">
+  <link async href="css/styles.css" rel="stylesheet">
 </body>
 </html>
