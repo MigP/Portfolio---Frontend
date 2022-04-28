@@ -206,6 +206,13 @@ p {
         z-index: 15;
 }
 
+alert_message {
+	font-size: x-large;
+	padding-top: 2em;
+	color: #a44242;
+	font-weight: bolder;
+}
+
 /* Portfolio css */
 	#activeleft, #activeright {
 		width: 100%;
