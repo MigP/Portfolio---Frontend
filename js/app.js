@@ -144,7 +144,9 @@
 
 	function changeFlipDiv(page) {
 		if (page != viewModel.activePage()) { // If clicked page isn't the same as the current page
-			document.getElementById("alert_message").value = "";
+			if (document.getElementById("alert_message") != null){
+                                document.getElementById("alert_message").value = "";
+                        }
 			// Flip divs
 				// Flip long divs
 					viewModel.flipDiv("flip12", "lower-top-row");
