@@ -144,7 +144,7 @@
 
 	function changeFlipDiv(page) {
 		if (page != viewModel.activePage()) { // If clicked page isn't the same as the current page
-			viewModel.activeAlertMessage(0);
+                        viewModel.activeAlertMessage(0);
 			// Flip divs
 				// Flip long divs
 					viewModel.flipDiv("flip12", "lower-top-row");
@@ -194,10 +194,6 @@
 					viewModel.bigRightFlip(newMainRight);
 					viewModel.longLeftFlip(newLongLeft);
 					viewModel.longRightFlip(newLongRight);
-
-					// Slide new content in
-						slideDiv("inslow", "activeleft", "right");
-						slideDiv("inslow", "activeright", "left");
 				}
 			
 			// Erase old content
@@ -349,36 +345,56 @@ function sendMessage(){
 			if (this.activePage() == "portfolio") {
 				$(newElement).html(this.portfolioLeftPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeleft")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeleft", "right");
 			} else if (this.activePage() == "education") {
 				$(newElement).html(this.educationLeftPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeleft2")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeleft2", "right");
 			} else if (this.activePage() == "work") {
 				$(newElement).html(this.workLeftPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeleft3")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeleft3", "right");
 			} else if (this.activePage() == "about") {
 				$(newElement).html(this.aboutLeftPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeleft4")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeleft4", "right");
 			} else if (this.activePage() == "contact") {
 				$(newElement).html("<div id='contactformleft' style='display: flex;flex-direction: column;height: 100%;padding-block: 0.5em;width: 80%;font-size: 0.8em;overflow-y: auto;'><label for='message' data-bind='text: english() ? text.yourMessageEN() : text.yourMessageFR()'></label><textarea class='formfield' data-bind='css: { lightformfield: light() }' id='message' name='message' value='' autocomplete='off' style='min-height: 10em;' required></textarea></div>");
 				ko.applyBindings(viewModel, $("#contactformleft")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "contactformleft", "right");
 			}
 		},
 		bigRightFlip: function(newElement) {
 			if (this.activePage() == "portfolio") {
 				$(newElement).html(this.portfolioRightPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeright")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeright", "left");
 			} else if (this.activePage() == "education") {
 				$(newElement).html(this.educationRightPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeright2")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeright2", "left");
 			} else if (this.activePage() == "work") {
 				$(newElement).html(this.workRightPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeright3")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeright3", "left");
 			} else if (this.activePage() == "about") {
 				$(newElement).html(this.aboutRightPages()[this.activePageNr()]);
 				ko.applyBindings(viewModel, $("#activeright4")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "activeright4", "left");
 			} else if (this.activePage() == "contact") {
 				$(newElement).html("<div id='contactformright' style='display: flex;flex-direction: column;height: 100%;padding-block: 0.5em;width: 80%;font-size: 0.8em;overflow-y: auto;'><label for='name' data-bind='text: english() ? text.yourNameEN() : text.yourNameFR()'></label><input class='formfield' data-bind='css: { lightformfield: light() }' id='name' name='name' value='' autocomplete='off' type='text' required><label for='email' data-bind='text: english() ? text.yourEmailEN() : text.yourEmailFR()'></label><input class='formfield' data-bind='css: { lightformfield: light() }' id='email' name='email' value='' autocomplete='off' type='email' pattern='/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/' required><input class='formbutton' data-bind='css: { lightformbutton: light() }, value: english() ? text.sendEN() : text.sendFR()' id='send' type='button' onclick='sendMessage();'><div id='alert_message'><p data-bind='text: english() ? viewModel.alertMessagesEN()[viewModel.activeAlertMessage()] : viewModel.alertMessagesFR()[viewModel.activeAlertMessage()]'></p></div></div>");
 				ko.applyBindings(viewModel, $("#contactformright")[0]);
+                                // Slide new content in
+                                        slideDiv("inslow", "contactformright", "left");
 			}
 		},
 		longLeftFlip: function(newElement) {
