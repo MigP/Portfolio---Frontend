@@ -28,7 +28,7 @@
 
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip2">
-          <div id='menu_portfolio' class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.portfolioEN() : text.portfolioFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('portfolio')">
+          <div id='menu_portfolio' class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: activePage() == 'portfolio' && dark(), lightselectedcell: activePage() == 'portfolio' && light(), lightcell: light() }, text: english() ? text.portfolioEN() : text.portfolioFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('portfolio')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -37,7 +37,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip3">
-          <div id='menu_education' class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.educationEN() : text.educationFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('education')">
+          <div id='menu_education' class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: activePage() == 'education' && dark(), lightselectedcell: activePage() =='education' && light(), lightcell: light() }, text: english() ? text.educationEN() : text.educationFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('education')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -46,7 +46,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip4">
-          <div id='menu_work' class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.workEN() : text.workFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('work')">
+          <div id='menu_work' class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: activePage() == 'work' && dark(), lightselectedcell: activePage() == 'work' && light(), lightcell: light() }, text: english() ? text.workEN() : text.workFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('work')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -55,7 +55,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip5">
-          <div id='menu_about' class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.aboutEN() : text.aboutFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('about')">
+          <div id='menu_about' class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: activePage() == 'about' && dark(), lightselectedcell: activePage() == 'about' && light(), lightcell: light() }, text: english() ? text.aboutEN() : text.aboutFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('about')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
@@ -64,7 +64,7 @@
       
       <div class="flip-card col-1 menu-cell" data-bind="css: { lightmenucell: light() }">
         <div class="flip-card-inner" id="flip6">
-          <div id='menu_contact' class="flip-card-front-hor cell pointer-cell" data-bind="css: { lightcell: light() }, text: english() ? text.contactEN() : text.contactFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('contact')">
+          <div id='menu_contact' class="flip-card-front-hor cell pointer-cell" data-bind="css: { selectedcell: activePage() == 'contact' && dark(), lightselectedcell: activePage() == 'contact' && light(), lightcell: light() }, text: english() ? text.contactEN() : text.contactFR(), click:  orientation() == 'portrait' ? closeHiddenMenu : ''" onclick="changeFlipDiv('contact')">
           </div>
           <div class="flip-card-back-hor cell pointer-cell" data-bind="css: { lightcell: light() }">
           </div>
