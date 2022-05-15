@@ -204,6 +204,7 @@ p {
         bottom: 0.5em;
         right: 1em;
         z-index: 15;
+        cursor: pointer;
 }
 
 #alert_message {
@@ -258,6 +259,7 @@ p {
                 align-self: center;
                 font-size: calc(0.5vw + 0.5vh + 0.7vmax);
                 line-height: 1em;
+                cursor: pointer;
         }
         
 	.long_span_txt {
